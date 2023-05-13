@@ -21,6 +21,7 @@
             if (mysqli_num_rows($respuesta) > 0) {
                 $passwordExistente = mysqli_fetch_array($respuesta);
                 $passwordExistente = $passwordExistente['password'];
+                echo 'Hola;'
                 
                 if (password_verify($password, $passwordExistente)) {
                     $_SESSION['usuario'] = $usuario;
